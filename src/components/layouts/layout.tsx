@@ -5,7 +5,7 @@ import React from "react";
 export type LayoutProps = {};
 export const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <Box as="main" bg="bg" sx={{ overflow: "hidden" }}>
+    <Box as="main" bg="bg" sx={{ }}>
       {children}
     </Box>
   );

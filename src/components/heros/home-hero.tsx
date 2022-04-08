@@ -7,16 +7,28 @@ import IntroText from "../animations/intro";
 import { Slide } from "react-reveal";
 import { LightSpeed } from "react-reveal";
 import { Parallax } from "react-scroll-parallax";
+import { keyframes } from "@emotion/react";
 import RollingText from "../animations/rolling-text";
 import BgImage from "../background-image/bg-image";
 import { StaticImage } from "gatsby-plugin-image";
 export type HomeHeroProps = {};
 export const HomeHero: React.FC<HomeHeroProps> = ({}) => {
+  const slowZoom = keyframes({
+    from: { transform: "scale(1, 1)" },
+    to: { transform: "scale(1.1, 1.1)" },
+  });
+
   return (
-    <Box as="section" sx={{ position: "relative", height: "100vh" }}>
+    <Box
+      as="section"
+      sx={{ position: "relative", height: "100vh", overflow: "hidden" }}
+    >
       <Grid>
         <BgImage>
           <StaticImage
+            sx={{
+              animation: `30s ease 0s normal none running ${slowZoom}`,
+            }}
             src="../../images/mona-1.jpg"
             alt="hero background"
             objectFit="cover"

@@ -29,6 +29,21 @@ const layout = {
       px: [4, 4, null],
       pb: [4, 4, 4],
     },
+    section: {
+      stickyCol: {
+        width: ["50%"],
+        position: "sticky",
+        top: "0px",
+        alignSelf: "flex-start",
+        overflowY: "auto",
+      },
+      col: {
+        width: ["50%"],
+        //fontSize: [4],
+        //letterSpacing: [2],
+        //justifyContent: "center",
+      },
+    },
   },
 };
 

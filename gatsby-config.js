@@ -37,6 +37,18 @@ module.exports = {
         path: "./src/pages/",
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts-v2`,
+      options: {
+        fonts: [
+          {
+            family: 'Ubuntu',
+            weights: ['300', '400', '500', '700']
+          },
+
+        ]
+      }
+    }
 
   ],
 };
