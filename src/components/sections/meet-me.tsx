@@ -6,11 +6,14 @@ import RollingText from "../animations/rolling-text";
 import { Parallax, useParallax } from "react-scroll-parallax";
 import Bounce from "react-reveal/Bounce";
 import { Fade } from "react-reveal";
+import withReveal from "react-reveal/withReveal";
 import { Container } from "../parallax/container";
 import FloatingWord from "../parallax/floating-word";
 import { ScrollContainer } from "../parallax/scroll-container";
 import Social from "../social";
 import Section2Col from "../layouts/section-2-col";
+import ListItem from "../list-item";
+import { FadeHeading, FadeParagraph } from "../animations/fade-components";
 export type MeetMeProps = {};
 export const MeetMe: React.FC<MeetMeProps> = ({}) => {
   //const { ref } = useParallax({ speed: 100 });
@@ -18,7 +21,7 @@ export const MeetMe: React.FC<MeetMeProps> = ({}) => {
   const HEIGHT = ["976px"];
 
   return (
-    <Section2Col>
+    <Section2Col reverse={false}>
       <Flex
         py={[5]}
         sx={{
@@ -62,38 +65,53 @@ export const MeetMe: React.FC<MeetMeProps> = ({}) => {
           <Paragraph variant="muted">millions in projects delivered</Paragraph>
         </Grid>
       </Flex>
-      <Box>
-        <Text variant="bold">
+      <Box bg="#373636" p={[6]}>
+        <FadeParagraph variant="medium" pb={[3]}>
           I am a multidisciplined IT/Business professional living in Hobart,
           Tasmania
-        </Text>
-        <Paragraph pt={2}>
+        </FadeParagraph>
+        <FadeParagraph pt={2}>
+          For 20+ years I've been honing my skills from my first job cutting code to being a product manager setting up a new 
+
           A hectic, but rewarding 20+ years, cutting code, running development
           teams, and managing projects for some of the finest wealth management
-          companies in Australia was the gateway to my own company
-        </Paragraph>
-        <Heading variant="heading.primary">Project Delivery</Heading>
+          companies in Australia was the gateway to my own company.
+        </FadeParagraph>
+        <FadeHeading variant="heading.primary">Project Delivery</FadeHeading>
+        <FadeParagraph>
+          "Project Delivery"... I think I just made this up! Whether you need me
+          to run an entire project(s), or to come in to support an exisitg
+          project team (or something else altogether), give me a call and to see
+          how I can help deliver your project.
+        </FadeParagraph>
+        <FadeParagraph></FadeParagraph>
+
+        <Fade top cascade>
+          <Box as="ul" variant="styles.ul">
+            <ListItem>Digital Transformations</ListItem>
+            <ListItem>Project Management</ListItem>
+            <ListItem>Business Analyst</ListItem>
+            <ListItem>Vendor Management</ListItem>
+            <ListItem>Systems implementation</ListItem>
+            <ListItem>System integrations</ListItem>
+          </Box>
+        </Fade>
+        <FadeHeading variant="heading.primary">
+          Software Development
+        </FadeHeading>
         <Paragraph>
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-          sint. Velit officia consequat duis enim velit mollit. Exercitation
-          veniam consequat sunt nostrud amet.
-        </Paragraph>
-        <Heading variant="heading.primary">Software Development</Heading>
-        <Paragraph>
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-          sint. Velit officia consequat duis enim velit mollit. Exercitation
-          veniam consequat sunt nostrud amet.
+          While my career evolved I never forgot my love of cutting code and
+          that is why I keep doing it!
         </Paragraph>
         <Paragraph pt={2}>
-          A hectic, but rewarding 20+ years, cutting code, running development
-          teams, and managing projects for some of the finest wealth management
-          companies in Australia was the gateway to my own company
+          Being a software developer as well as a "business" person I am
+          uniquely qualified to deliver your next development project.
         </Paragraph>
-        <Heading variant="heading.primary">Project Delivery</Heading>
+
         <Paragraph>
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-          sint. Velit officia consequat duis enim velit mollit. Exercitation
-          veniam consequat sunt nostrud amet.
+          I am focussed on developing highly responsive, accessible, secure and
+          fast web sites/apps that can be a simple marketing website to boost
+          leads/sales, through to advanced online solutions.  
         </Paragraph>
         <Heading variant="heading.primary">Software Development</Heading>
         <Paragraph>
@@ -156,7 +174,6 @@ export const MeetMe: React.FC<MeetMeProps> = ({}) => {
     </Section2Col>
   );
 
-
   return (
     <Flex
       as="section"
@@ -173,9 +190,7 @@ export const MeetMe: React.FC<MeetMeProps> = ({}) => {
           alignSelf: "flex-start",
           overflowY: "auto",
         }}
-      >
-     
-      </Box>
+      ></Box>
 
       <Flex
         color="white"

@@ -8,23 +8,23 @@ import Project from "./project";
 
 
 
-export type ProjectPlanfocusProps = {  }
-export const ProjectPlanfocus: React.FC<ProjectPlanfocusProps> = ({  }) => {
+export type ProjectTotalcareHearingProps = {  }
+export const ProjectTotalcareHearing: React.FC<ProjectTotalcareHearingProps> = ({  }) => {
   
       const imageData = useStaticQuery(imageQuery);
       const image = getImage(imageData.file);
       return (
         <Project
           gatsbyImageData={image}
-          heading={"Plan Focus"}
+          heading={"Totalcare Hearing"}
           subheading={"Website"}
         />
       );
 };
 
-export default ProjectPlanfocus  ;
+export default ProjectTotalcareHearing  ;
 const imageQuery = graphql`
-  query PlanfocusProject {
+  query TotalcareHearingProject {
     file(name: { eq: "hero-bg" }) {
       childImageSharp {
         gatsbyImageData

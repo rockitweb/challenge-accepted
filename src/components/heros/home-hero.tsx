@@ -41,12 +41,12 @@ export const HomeHero: React.FC<HomeHeroProps> = ({}) => {
         <Grid sx={{ position: "relative", gridArea: "1/1" }}>
           <Flex variant="hero.default">
             <Flex as="h2" sx={{ flexDirection: "column" }}>
-              <Flex sx={{ justifyContent: "flex-end" }}>
+              <Flex sx={{ justifyContent: "flex-start" }}>
                 <Box>
                   Hi, my name is <strong>Simon Turk </strong>
                 </Box>
               </Flex>
-              <Flex sx={{ justifyContent: "flex-end" }}>
+              <Flex sx={{ justifyContent: "flex-start" }}>
                 <Box pr={[3]}>and I am a</Box>
                 <RollingText>
                   <Box color="primary">Project Manager</Box>

@@ -6,6 +6,8 @@ import ProjectCrestone from "../projects/project-crestone";
 import ProjectAirportlink from "../projects/project-airportlink";
 import Section2Col from "../layouts/section-2-col";
 import ProjectPlanfocus from "../projects/project-planfocus";
+import ProjectQsn from "../projects/project-qsn";
+import ProjectTotalcareHearing from "../projects/project-totalcare-hearing";
 
 export type ProjectsProps = {};
 export const Projects: React.FC<ProjectsProps> = ({}) => {
@@ -36,6 +38,8 @@ export const Projects: React.FC<ProjectsProps> = ({}) => {
         <ProjectCrestone />
         <ProjectAirportlink />
         <ProjectPlanfocus />
+        <ProjectQsn />
+        <ProjectTotalcareHearing />
       </Flex>
     </Section2Col>
   );

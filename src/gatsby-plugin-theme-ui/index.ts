@@ -10,7 +10,10 @@ const styles = {
     ...theme.styles.p,
     color: "white",
     fontWeight: "light",
-    fontSize: [3],
+    fontSize: [1],
+    lineHeight: [2],
+    marginBlockStart: ["1em"],
+    marginBlockEnd: ["1em"],
   },
   h2: {
     color: "primary",
@@ -41,6 +44,18 @@ export default {
   },
   styles: {
     ...styles,
+    ul: {
+      fontFamily: "body",
+      fontWeight: "light",
+      lineHeight: "body",
+      fontSize: 1,
+      color: "white",
+      li: {
+        pl: [3],
+      },
+      
+      pl: [3],
+    },
   },
   text: {
     ...styles,
@@ -49,15 +64,14 @@ export default {
     },
     default: {
       ...styles.p,
-
     },
     heading: {
       primary: {
         fontFamily: "heading",
         color: "primary",
         letterSpacing: [2],
-        fontSize: [5],
-        my: [3],
+        fontSize: [3],
+        my: [4],
         fontWeight: "body",
         //lineHeight: [2],
       },
@@ -87,6 +101,10 @@ export default {
       variant: "text.default",
       fontWeight: "bold",
     },
+    medium: {
+      variant: "text.default",
+      fontWeight: "medium",
+    },
     muted: {
       variant: "paragraph",
       color: "muted",
@@ -95,6 +113,30 @@ export default {
       variant: "paragraph",
       color: "white",
       fontSize: [2],
+    },
+    ul: {
+      fontFamily: "body",
+      fontWeight: "light",
+      lineHeight: "body",
+      fontSize: 3,
+      color: "white",
+    },
+  },
+
+  brand: {
+    default: { fontFamily: "heading", color: "white", lineHeight: [1] },
+    line1: { variant: "brand.default", fontSize: [5] },
+    line2: {
+      variant: "brand.default",
+      textTransform: "uppercase",
+      fontSize: [1],
+      fontWeight: "light",
+    },
+  },
+  nav: {
+    color: "white",
+    item: {
+      p: [2],
     },
   },
   ...layout,

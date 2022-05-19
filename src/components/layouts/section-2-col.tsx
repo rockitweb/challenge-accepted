@@ -13,7 +13,7 @@ export const Section2Col: React.FC<Section2ColProps> = ({
   return (
     <Flex
       as="section"
-      py={[4]}
+      py={[]}
       sx={{ minHeight: HEIGHT, flexDirection: reverse ? "row-reverse" : "row" }}
     >
       <Box variant="layout.section.stickyCol">{childArray[0]}</Box>
