@@ -6,6 +6,11 @@ import layout from "./layouts";
 
 const styles = {
   ...theme.styles,
+  root: {
+    ...theme.styles.root,
+    letterSpacing: [".1em"],
+  },
+
   p: {
     ...theme.styles.p,
     color: "white",
@@ -14,6 +19,7 @@ const styles = {
     lineHeight: [2],
     marginBlockStart: ["1em"],
     marginBlockEnd: ["1em"],
+    //letterSpacing: [".1em"],
   },
   h2: {
     color: "primary",
@@ -40,7 +46,8 @@ export default {
     primary: "#F58840",
     muted: "#C5C2C2",
     bg: "#101010",
-    overlay: "rgba(0, 0, 0, 0.5)",
+    grey: "#171717",
+    overlay: "rgba(0, 0, 0, 0.7)", //"rgba(55,54,54,.7)", //"rgba(0, 0, 0, 0.7)",
   },
   styles: {
     ...styles,
@@ -53,7 +60,7 @@ export default {
       li: {
         pl: [3],
       },
-      
+
       pl: [3],
     },
   },
@@ -104,6 +111,11 @@ export default {
     medium: {
       variant: "text.default",
       fontWeight: "medium",
+    },
+    large: {
+      variant: "text.default",
+      fontWeight: "medium",
+      fontSize: [3],
     },
     muted: {
       variant: "paragraph",

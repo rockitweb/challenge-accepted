@@ -7,6 +7,7 @@ import MeetMe from "../components/sections/meet-me";
 import { ParallaxProvider } from "react-scroll-parallax";
 import Services from "../components/services/services";
 import Projects from "../components/sections/projects";
+import Contact from "../components/sections/contact";
 
 export type IndexPageProps = {};
 export const IndexPage: React.FC<IndexPageProps> = ({}) => {
@@ -15,6 +16,7 @@ export const IndexPage: React.FC<IndexPageProps> = ({}) => {
       <HomeHero />
       <MeetMe />
       <Projects />
+      <Contact />
     </Layout>
   );
 };

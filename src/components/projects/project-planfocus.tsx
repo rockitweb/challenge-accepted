@@ -17,7 +17,7 @@ export const ProjectPlanfocus: React.FC<ProjectPlanfocusProps> = ({  }) => {
         <Project
           gatsbyImageData={image}
           heading={"Plan Focus"}
-          subheading={"Website"}
+          subheading={"Integration"}
         />
       );
 };
@@ -25,9 +25,9 @@ export const ProjectPlanfocus: React.FC<ProjectPlanfocusProps> = ({  }) => {
 export default ProjectPlanfocus  ;
 const imageQuery = graphql`
   query PlanfocusProject {
-    file(name: { eq: "hero-bg" }) {
+    file(name: { eq: "integration" }) {
       childImageSharp {
-        gatsbyImageData
+        gatsbyImageData(height: 400)
       }
     }
   }

@@ -13,7 +13,7 @@ export const ProjectCrestone: React.FC<ProjectCrestoneProps> = ({}) => {
     <Project
       gatsbyImageData={image}
       heading={"Crestone"}
-      subheading={"business transformation"}
+      subheading={"project management"}
     />
   );
 };
@@ -22,9 +22,9 @@ export default ProjectCrestone;
 
 export const imageQuery = graphql`
   query CrestoneProject {
-    file(name: { eq: "hero-bg" }) {
+    file(name: { eq: "project 1" }) {
       childImageSharp {
-        gatsbyImageData
+        gatsbyImageData(height: 400)
       }
     }
   }

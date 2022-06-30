@@ -29,7 +29,7 @@ export const HomeHero: React.FC<HomeHeroProps> = ({}) => {
             sx={{
               animation: `30s ease 0s normal none running ${slowZoom}`,
             }}
-            src="../../images/mona-1.jpg"
+            src="../../images/mona-2.jpeg"
             alt="hero background"
             objectFit="cover"
             objectPosition="center top"

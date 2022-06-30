@@ -25,7 +25,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
 
   return (
     <Flex
-      py={[1]}
+      py={[3]}
       bg={scrolled ? "black" : "transparent"}
       sx={{
         width: "100%",

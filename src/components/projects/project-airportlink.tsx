@@ -22,9 +22,9 @@ export default ProjectAirportlink;
 
 export const imageQuery = graphql`
   query AirportlinkProject {
-    file(name: { eq: "hero-bg" }) {
+    file(name: { eq: "airportlink" }) {
       childImageSharp {
-        gatsbyImageData
+        gatsbyImageData(height: 400)
       }
     }
   }

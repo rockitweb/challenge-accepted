@@ -3,8 +3,8 @@ import { Flex, jsx } from "theme-ui";
 import React from "react";
 import BgOverlay from "./bg-overlay";
 
-export type BgImageProps = {};
-export const BgImage: React.FC<BgImageProps> = ({ children }) => {
+export type BgImageProps = { overlay?: string };
+export const BgImage: React.FC<BgImageProps> = ({ children, overlay }) => {
   return (
     <Flex
       sx={{
@@ -15,7 +15,7 @@ export const BgImage: React.FC<BgImageProps> = ({ children }) => {
       }}
     >
       {children}
-      <BgOverlay height={["100%"]} bgColor={"overlay"} />
+      <BgOverlay height={["100%"]} bgColor={overlay ? overlay : ""} />
     </Flex>
   );
 };

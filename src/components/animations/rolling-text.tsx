@@ -25,7 +25,7 @@ export const RollingText: React.FC<RollingTextProps> = ({ children }) => {
     <Box>
       {Children.map(childrenArray, (child, index) => (
         <Box sx={{ display: activeElement === index ? "block" : "none" }}>
-          <Fade top>{child}</Fade>
+          <Fade duration={2000}>{child}</Fade>
         </Box>
       ))}
     </Box>

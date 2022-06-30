@@ -22,12 +22,13 @@ export const Projects: React.FC<ProjectsProps> = ({}) => {
           position: "relative",
         }}
       >
-        <Text mt={[4]} variant="heading.white" sx={{ letterSpacing: ".5em" }}>
+        <Text mt={[]} variant="heading.white" sx={{ letterSpacing: ".5em" }}>
           projects
         </Text>
         <Paragraph variant="small">
           crestone - airport link - plan focus - QSN - totalcare hearing
         </Paragraph>
+        
       </Flex>
       <Flex
         sx={{

@@ -17,7 +17,7 @@ export const ProjectTotalcareHearing: React.FC<ProjectTotalcareHearingProps> = (
         <Project
           gatsbyImageData={image}
           heading={"Totalcare Hearing"}
-          subheading={"Website"}
+          subheading={"Website/Ecommerce"}
         />
       );
 };
@@ -25,9 +25,9 @@ export const ProjectTotalcareHearing: React.FC<ProjectTotalcareHearingProps> = (
 export default ProjectTotalcareHearing  ;
 const imageQuery = graphql`
   query TotalcareHearingProject {
-    file(name: { eq: "hero-bg" }) {
+    file(name: { eq: "totalcarehearing" }) {
       childImageSharp {
-        gatsbyImageData
+        gatsbyImageData(height: 400)
       }
     }
   }

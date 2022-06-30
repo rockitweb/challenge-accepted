@@ -23,12 +23,13 @@ export const MeetMe: React.FC<MeetMeProps> = ({}) => {
   return (
     <Section2Col reverse={false}>
       <Flex
-        py={[5]}
+        //py={[5]}
         sx={{
           flexDirection: "column",
-          height: HEIGHT,
+          width: "100%",
           alignItems: "center",
-          justifyContent: "space-between",
+          justifyContent: "center",
+          position: "relative",
         }}
       >
         <StaticImage
@@ -46,7 +47,7 @@ export const MeetMe: React.FC<MeetMeProps> = ({}) => {
           }}
         />
 
-        <Text mt={[4]} variant="heading.white" sx={{ letterSpacing: ".5em" }}>
+        <Text mt={[]} variant="heading.white" sx={{ letterSpacing: ".5em" }}>
           about
         </Text>
         <Grid columns={3} sx={{ textAlign: "center" }}>
@@ -65,17 +66,17 @@ export const MeetMe: React.FC<MeetMeProps> = ({}) => {
           <Paragraph variant="muted">millions in projects delivered</Paragraph>
         </Grid>
       </Flex>
-      <Box bg="#373636" p={[6]}>
-        <FadeParagraph variant="medium" pb={[3]}>
+      <Box bg="grey" p={[6]}>
+        <FadeParagraph variant="large" pb={[3]}>
           I am a multidisciplined IT/Business professional living in Hobart,
           Tasmania
         </FadeParagraph>
         <FadeParagraph pt={2}>
-          For 20+ years I've been honing my skills from my first job cutting code to being a product manager setting up a new 
-
-          A hectic, but rewarding 20+ years, cutting code, running development
-          teams, and managing projects for some of the finest wealth management
-          companies in Australia was the gateway to my own company.
+          For 20+ years I've been honing my skills from my first job cutting
+          code to being a product manager setting up a new A hectic, but
+          rewarding 20+ years, cutting code, running development teams, and
+          managing projects for some of the finest wealth management companies
+          in Australia was the gateway to my own company.
         </FadeParagraph>
         <FadeHeading variant="heading.primary">Project Delivery</FadeHeading>
         <FadeParagraph>
@@ -86,7 +87,7 @@ export const MeetMe: React.FC<MeetMeProps> = ({}) => {
         </FadeParagraph>
         <FadeParagraph></FadeParagraph>
 
-        <Fade top cascade>
+        <Fade bottom cascade>
           <Box as="ul" variant="styles.ul">
             <ListItem>Digital Transformations</ListItem>
             <ListItem>Project Management</ListItem>
@@ -111,64 +112,7 @@ export const MeetMe: React.FC<MeetMeProps> = ({}) => {
         <Paragraph>
           I am focussed on developing highly responsive, accessible, secure and
           fast web sites/apps that can be a simple marketing website to boost
-          leads/sales, through to advanced online solutions.  
-        </Paragraph>
-        <Heading variant="heading.primary">Software Development</Heading>
-        <Paragraph>
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-          sint. Velit officia consequat duis enim velit mollit. Exercitation
-          veniam consequat sunt nostrud amet.
-        </Paragraph>
-        <Paragraph pt={2}>
-          A hectic, but rewarding 20+ years, cutting code, running development
-          teams, and managing projects for some of the finest wealth management
-          companies in Australia was the gateway to my own company
-        </Paragraph>
-        <Heading variant="heading.primary">Project Delivery</Heading>
-        <Paragraph>
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-          sint. Velit officia consequat duis enim velit mollit. Exercitation
-          veniam consequat sunt nostrud amet.
-        </Paragraph>
-        <Heading variant="heading.primary">Software Development</Heading>
-        <Paragraph>
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-          sint. Velit officia consequat duis enim velit mollit. Exercitation
-          veniam consequat sunt nostrud amet.
-        </Paragraph>
-        <Paragraph pt={2}>
-          A hectic, but rewarding 20+ years, cutting code, running development
-          teams, and managing projects for some of the finest wealth management
-          companies in Australia was the gateway to my own company
-        </Paragraph>
-        <Heading variant="heading.primary">Project Delivery</Heading>
-        <Paragraph>
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-          sint. Velit officia consequat duis enim velit mollit. Exercitation
-          veniam consequat sunt nostrud amet.
-        </Paragraph>
-        <Heading variant="heading.primary">Software Development</Heading>
-        <Paragraph>
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-          sint. Velit officia consequat duis enim velit mollit. Exercitation
-          veniam consequat sunt nostrud amet.
-        </Paragraph>
-        <Paragraph pt={2}>
-          A hectic, but rewarding 20+ years, cutting code, running development
-          teams, and managing projects for some of the finest wealth management
-          companies in Australia was the gateway to my own company
-        </Paragraph>
-        <Heading variant="heading.primary">Project Delivery</Heading>
-        <Paragraph>
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-          sint. Velit officia consequat duis enim velit mollit. Exercitation
-          veniam consequat sunt nostrud amet.
-        </Paragraph>
-        <Heading variant="heading.primary">Software Development</Heading>
-        <Paragraph>
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-          sint. Velit officia consequat duis enim velit mollit. Exercitation
-          veniam consequat sunt nostrud amet.
+          leads/sales, through to advanced online solutions.
         </Paragraph>
       </Box>
     </Section2Col>

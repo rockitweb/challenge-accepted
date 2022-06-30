@@ -33,9 +33,16 @@ const layout = {
       stickyCol: {
         width: ["50%"],
         position: "sticky",
-        top: "0px",
+        top: "30vh",
         alignSelf: "flex-start",
         overflowY: "auto",
+        pt: [6],
+        pb: [6],
+      },
+      centeredCol: {
+        width: ["50%"],
+
+        alignSelf: "center",
       },
       col: {
         width: ["50%"],

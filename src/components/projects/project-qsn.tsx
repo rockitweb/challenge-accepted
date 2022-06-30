@@ -17,7 +17,7 @@ export const ProjectQsn: React.FC<ProjectQsnProps> = ({  }) => {
         <Project
           gatsbyImageData={image}
           heading={"QSN"}
-          subheading={"Website"}
+          subheading={"Website/Ecommerce/Integration"}
         />
       );
 };
@@ -25,9 +25,9 @@ export const ProjectQsn: React.FC<ProjectQsnProps> = ({  }) => {
 export default ProjectQsn  ;
 const imageQuery = graphql`
   query QsnProject {
-    file(name: { eq: "hero-bg" }) {
+    file(name: { eq: "qsn" }) {
       childImageSharp {
-        gatsbyImageData
+        gatsbyImageData(height: 400)
       }
     }
   }
