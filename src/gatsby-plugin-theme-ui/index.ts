@@ -1,5 +1,6 @@
 // example theme
 import theme from "@theme-ui/preset-roboto";
+import buttons from "./buttons";
 
 import { hero } from "./hero";
 import layout from "./layouts";
@@ -30,6 +31,7 @@ const styles = {
 
 export default {
   ...theme,
+  ...buttons,
   fonts: {
     body: "Roboto, system-ui, sans-serif",
     heading: "Ubuntu, Roboto, system-ui, sans-serif",
@@ -153,4 +155,51 @@ export default {
   },
   ...layout,
   ...hero,
+  forms: {
+    validationError: { color: "primary" },
+    label: {
+      fontSize: 1,
+      fontWeight: "bold",
+      color: "white",
+      width: "auto",
+    },
+    input: {
+      borderColor: "gray",
+      color: "white",
+      fontFamily: "body",
+      "&:focus": {
+        borderColor: "primary",
+        borderWidth: "1px",
+        //boxShadow: (t) => `0 0 0 2px ${t.colors.primary}`,
+        outline: "none",
+        bg: "white",
+        color: "text",
+        fontFamily: "body",
+      },
+    },
+    select: {
+      borderColor: "gray",
+      "&:focus": {
+        borderColor: "primary",
+        boxShadow: (t) => `0 0 0 2px ${t.colors.primary}`,
+        outline: "none",
+      },
+    },
+    textarea: {
+      borderColor: "gray",
+      color: "white",
+      fontFamily: "body",
+      "&:focus": {
+        borderColor: "primary",
+        //boxShadow: (t) => `0 0 0 2px ${t.colors.primary}`,
+        outline: "none",
+        bg: "white",
+        color: "text",
+        fontFamily: "body",
+      },
+    },
+    slider: {
+      bg: "muted",
+    },
+  },
 };

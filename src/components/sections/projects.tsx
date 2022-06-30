@@ -12,7 +12,7 @@ import ProjectTotalcareHearing from "../projects/project-totalcare-hearing";
 export type ProjectsProps = {};
 export const Projects: React.FC<ProjectsProps> = ({}) => {
   return (
-    <Section2Col reverse={true}>
+    <Section2Col reverse={true} id="projects">
       <Flex
         sx={{
           flexDirection: "column",
@@ -28,7 +28,6 @@ export const Projects: React.FC<ProjectsProps> = ({}) => {
         <Paragraph variant="small">
           crestone - airport link - plan focus - QSN - totalcare hearing
         </Paragraph>
-        
       </Flex>
       <Flex
         sx={{

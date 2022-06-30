@@ -21,7 +21,7 @@ export const MeetMe: React.FC<MeetMeProps> = ({}) => {
   const HEIGHT = ["976px"];
 
   return (
-    <Section2Col reverse={false}>
+    <Section2Col reverse={false} id="about">
       <Flex
         //py={[5]}
         sx={{
