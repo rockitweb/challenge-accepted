@@ -4,20 +4,39 @@ import React, { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
 import Fade from "react-reveal/Fade";
 import { Link } from "gatsby";
+import * as Scroll from "react-scroll";
+import { Element, scroller } from "react-scroll";
 
 export type TopNavProps = { showHamburger: boolean };
 export const TopNav: React.FC<TopNavProps> = ({ showHamburger }) => {
   const [showMenu, setShowMenu] = useState(!showHamburger);
+
+  const handleScroll = (e: any, anchor: string) => {
+    e.preventDefault();
+    scroller.scrollTo(anchor, {
+      duration: 1500,
+      delay: 100,
+      smooth: true,
+      offset: 0, // Scrolls to element + 0 pixels down the page
+    });
+  };
+
   const navItems = (
     <>
       <Box variant="nav.item">
-        <Link to="#about">about</Link>
+        <Link onClick={(e) => handleScroll(e, "about")} to="#about">
+          about
+        </Link>
       </Box>
       <Box variant="nav.item">
-        <Link to="#projects">projects</Link>
+        <Link onClick={(e) => handleScroll(e, "projects")} to="#projects">
+          projects
+        </Link>
       </Box>
       <Box variant="nav.item">
-        <Link to="#contact">contact</Link>
+        <Link onClick={(e) => handleScroll(e, "contact")} to="#contact">
+          contact
+        </Link>
       </Box>
     </>
   );
