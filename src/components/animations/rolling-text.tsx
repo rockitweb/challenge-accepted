@@ -18,7 +18,10 @@ export const RollingText: React.FC<RollingTextProps> = ({ children }) => {
       );
     }, 3000);
 
-    return () => clearInterval(interval);
+    return () => {
+      console.log("cc");
+      clearInterval(interval);
+    };
   }, []);
 
   return (

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import axios from "axios";
+
 import { navigate } from "gatsby";
 
 const encode = (data: any) => {
@@ -15,7 +15,6 @@ export type FieldHTML = {
 };
 
 export function useNetlify<T>(
-
   redirect?: string,
   fieldHtml: FieldHTML[] = [],
   fieldOrder: string[] = []
@@ -24,7 +23,10 @@ export function useNetlify<T>(
     mode: "onBlur",
   });
 
-  const [serverState, setServerState] = useState({
+  const [serverState, setServerState] = useState<{
+    submitting: boolean;
+    status: { ok: boolean; msg: string } | null;
+  }>({
     submitting: false,
     status: null,
   });
@@ -34,8 +36,11 @@ export function useNetlify<T>(
       submitting: false,
       status: { ok, msg },
     });
+    console.log("aa");
+    console.log("xx");
     if (ok) {
       form.reset();
+
       if (redirect) {
         navigate(`/${redirect}`);
       }
@@ -92,21 +97,20 @@ export function useNetlify<T>(
 
         //console.log(formattedData, JSON.stringify(formattedData));
         //return;
-        axios({
-          method: "post",
-          url: `/`,
-          data: encode(formattedData),
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        })
-          .then((r) => {
-            handleServerResponse(true, "Thanks!");
-          })
-          .catch((r) => {
-            handleServerResponse(false, r.response.data.error);
+        try {
+          fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({ "form-name": "contact-form", ...formattedData }),
+          }).then((response) => {
+            handleServerResponse(response.ok, response.statusText);
           });
+        } catch (e) {
+          console.log("err", e);
+        }
       },
       (error) => {
-        console.log(error);
+        console.log("err", error);
       }
     )(e);
   };
