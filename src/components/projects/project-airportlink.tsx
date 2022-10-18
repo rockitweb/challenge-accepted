@@ -24,7 +24,7 @@ export const imageQuery = graphql`
   query AirportlinkProject {
     file(name: { eq: "airportlink" }) {
       childImageSharp {
-        gatsbyImageData(height: 400)
+        gatsbyImageData(width: 1000)
       }
     }
   }

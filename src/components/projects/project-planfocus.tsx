@@ -27,7 +27,7 @@ const imageQuery = graphql`
   query PlanfocusProject {
     file(name: { eq: "integration" }) {
       childImageSharp {
-        gatsbyImageData(height: 400)
+        gatsbyImageData(width: 1000)
       }
     }
   }

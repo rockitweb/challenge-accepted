@@ -68,15 +68,17 @@ export const MeetMe: React.FC<MeetMeProps> = ({}) => {
       </Flex>
       <Box bg="grey" p={[6]}>
         <FadeParagraph variant="large" pb={[3]}>
-          I am a multidisciplined IT/Business professional living in Hobart,
-          Tasmania
+          Hello, my name is Simon Turk. I am a consultant specialising in
+          project delivery and software development.
         </FadeParagraph>
         <FadeParagraph pt={2}>
-          For 20+ years I've been honing my skills from my first job cutting
-          code to being a product manager setting up a new A hectic, but
-          rewarding 20+ years, cutting code, running development teams, and
-          managing projects for some of the finest wealth management companies
-          in Australia was the gateway to my own company.
+          In 2019, after 20 years in Sydney and Hobart, working for some of the
+          countries best wealth management firms, I took the plunge and started
+          my own consulting company - and I haven’t looked back!
+        </FadeParagraph>
+        <FadeParagraph pt={2}>
+          I have two passions; helping companies to deliver projects, and
+          cutting code So, that’s what I do…
         </FadeParagraph>
         <FadeHeading variant="heading.primary">Project Delivery</FadeHeading>
         <FadeParagraph>

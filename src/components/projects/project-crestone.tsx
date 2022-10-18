@@ -24,7 +24,7 @@ export const imageQuery = graphql`
   query CrestoneProject {
     file(name: { eq: "project 1" }) {
       childImageSharp {
-        gatsbyImageData(height: 400)
+        gatsbyImageData(width: 1000)
       }
     }
   }

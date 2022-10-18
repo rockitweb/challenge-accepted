@@ -27,7 +27,7 @@ const imageQuery = graphql`
   query QsnProject {
     file(name: { eq: "qsn" }) {
       childImageSharp {
-        gatsbyImageData(height: 400)
+        gatsbyImageData(width: 1000)
       }
     }
   }

@@ -27,7 +27,7 @@ const imageQuery = graphql`
   query TotalcareHearingProject {
     file(name: { eq: "totalcarehearing" }) {
       childImageSharp {
-        gatsbyImageData(height: 400)
+        gatsbyImageData(width: 1000)
       }
     }
   }

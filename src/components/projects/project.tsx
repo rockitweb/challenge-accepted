@@ -19,15 +19,20 @@ export const Project: React.FC<ProjectProps> = ({
   heading,
   subheading,
 }) => {
+  const HEIGHT = ["450px"];
   return (
     <Fade duration={4000} opposite={true}>
-      <Grid sx={{ position: "relative", minHeight: "400px" }}>
-        <BgImage overlay="overlay">
+      <Grid
+        sx={{
+          position: "relative",
+        }}
+      >
+        <BgImage overlay="overlay" height={HEIGHT}>
           <GatsbyImage
             image={gatsbyImageData}
             alt={heading}
             objectFit="cover"
-            objectPosition="center center"
+            objectPosition="center top"
             loading="lazy"
             sx={{ width: "100%" }}
           />
@@ -42,6 +47,9 @@ export const Project: React.FC<ProjectProps> = ({
               justifyContent: "center",
               position: "relative",
               height: "100%",
+              //borderBottomColor: "white",
+              //borderBottomWidth: "1px",
+              //borderBottomStyle: "solid",
             }}
           >
             <Text

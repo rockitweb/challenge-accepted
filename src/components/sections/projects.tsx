@@ -8,6 +8,7 @@ import Section2Col from "../layouts/section-2-col";
 import ProjectPlanfocus from "../projects/project-planfocus";
 import ProjectQsn from "../projects/project-qsn";
 import ProjectTotalcareHearing from "../projects/project-totalcare-hearing";
+import ProjectSeperator from "../projects/project-seperator";
 
 export type ProjectsProps = {};
 export const Projects: React.FC<ProjectsProps> = ({}) => {
@@ -33,12 +34,17 @@ export const Projects: React.FC<ProjectsProps> = ({}) => {
         sx={{
           flexDirection: "column",
           width: ["100%", "100%"],
+          //bg: "white",
         }}
       >
         <ProjectCrestone />
+        <ProjectSeperator />
         <ProjectAirportlink />
+        <ProjectSeperator />
         <ProjectPlanfocus />
+        <ProjectSeperator />
         <ProjectQsn />
+        <ProjectSeperator />
         <ProjectTotalcareHearing />
       </Flex>
     </Section2Col>
